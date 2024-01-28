@@ -527,13 +527,13 @@ pub(crate) fn add_graph_nodes(
     Ok(())
 }
 
-#[cfg(feature = "export_neon_main")]
-#[neon::main]
-fn main(mut cx: neon::prelude::ModuleContext) -> neon::prelude::NeonResult<()> {
-    cx.export_function("genFromDecomposed", gen_from_decomposed_node)?;
-    cx.export_function("genFromRaw", gen_from_raw_node)?;
-    Ok(())
-}
+// #[cfg(feature = "export_neon_main")]
+// #[neon::main]
+// fn main(mut cx: neon::prelude::ModuleContext) -> neon::prelude::NeonResult<()> {
+//     cx.export_function("genFromDecomposed", gen_from_decomposed_node)?;
+//     cx.export_function("genFromRaw", gen_from_raw_node)?;
+//     Ok(())
+// }
 
 #[cfg(test)]
 mod tests {
